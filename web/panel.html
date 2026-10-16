@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel - AutoMarket</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Barra superior con el usuario, su rol y cerrar sesión -->
+  <header class="navbar">
+    <a class="brand" href="/">AutoMarket</a>
+    <nav class="actions">
+      <span id="who" class="badge"></span>
+      <button class="btn btn-outline" id="btn-logout">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Sección del vendedor (HU-VEN-01) -->
+    <section id="seller" class="hidden">
+      <div class="panel">
+        <h2>Publicar vehículo</h2>
+        <form id="form-publish" class="form form-grid">
+          <label>Marca <input name="brand" required></label>
+          <label>Modelo <input name="model" required></label>
+          <label>Año <input type="number" name="year" min="1900" required></label>
+          <label>Precio <input type="number" name="price" min="1" required></label>
+          <label class="full">Imagen (jpg, png, webp; máx. 5 MB)
+            <input type="file" name="image" accept=".jpg,.jpeg,.png,.webp" required>
+          </label>
+          <p class="msg full" id="publish-msg"></p>
+          <button type="submit" class="btn full">Enviar a aprobación</button>
+        </form>
+      </div>
+      <div class="panel">
+        <h2>Mis vehículos</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Imagen</th><th>Vehículo</th><th>Precio</th><th>Estado</th><th></th></tr></thead>
+            <tbody id="my-vehicles"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección del administrador (HU-ADM-01) -->
+    <section id="admin" class="hidden">
+      <div class="panel">
+        <h2>Pendientes de aprobación</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Imagen</th><th>Vehículo</th><th>Precio</th><th></th></tr></thead>
+            <tbody id="pending"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Todas las publicaciones</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Imagen</th><th>Vehículo</th><th>Precio</th><th>Estado</th><th></th></tr></thead>
+            <tbody id="all-vehicles"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Vendedores</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nombre</th><th>Correo</th><th>Teléfono</th><th></th></tr></thead>
+            <tbody id="users"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/panel.js"></script>
+</body>
+</html>

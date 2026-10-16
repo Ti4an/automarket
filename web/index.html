@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMarket</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Barra superior con la marca y los botones de acceso -->
+  <header class="navbar">
+    <span class="brand">AutoMarket</span>
+    <nav class="actions">
+      <button class="btn btn-outline" id="btn-login">Iniciar sesión</button>
+      <button class="btn" id="btn-register">Registrarse</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Encuentra tu próximo vehículo</h1>
+      <p>Explora las publicaciones aprobadas y contacta directamente al vendedor.</p>
+    </section>
+
+    <!-- Catálogo de vehículos publicados (HU-VIS-01) -->
+    <section>
+      <h2>Catálogo</h2>
+      <div id="catalog" class="grid"></div>
+      <p id="catalog-empty" class="muted hidden">Aún no hay vehículos publicados.</p>
+    </section>
+  </main>
+
+  <!-- Modal: inicio de sesión -->
+  <dialog id="dlg-login">
+    <form id="form-login" class="form">
+      <h3>Iniciar sesión</h3>
+      <label>Correo <input type="email" name="email" required></label>
+      <label>Contraseña <input type="password" name="password" required></label>
+      <p class="msg" id="login-msg"></p>
+      <div class="row">
+        <button type="button" class="btn btn-outline" data-close>Cancelar</button>
+        <button type="submit" class="btn">Entrar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Modal: registro de vendedor (HU-VEN-01) -->
+  <dialog id="dlg-register">
+    <form id="form-register" class="form">
+      <h3>Registrarse como vendedor</h3>
+      <label>Nombre <input name="name" required></label>
+      <label>Correo <input type="email" name="email" required></label>
+      <label>Teléfono <input name="phone" required></label>
+      <label>Contraseña (mín. 8) <input type="password" name="password" minlength="8" required></label>
+      <p class="msg" id="register-msg"></p>
+      <div class="row">
+        <button type="button" class="btn btn-outline" data-close>Cancelar</button>
+        <button type="submit" class="btn">Crear cuenta</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Modal: contacto del vendedor -->
+  <dialog id="dlg-contact">
+    <div class="form">
+      <h3>Contacto del vendedor</h3>
+      <div id="contact-info"></div>
+      <div class="row">
+        <button type="button" class="btn" data-close>Cerrar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>

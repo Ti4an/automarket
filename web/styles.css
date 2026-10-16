@@ -1,0 +1,154 @@
+/* Estilos básicos de AutoMarket */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Barra de arriba */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.hero {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+/* Botones */
+.btn {
+  padding: 6px 12px;
+  border: 1px solid #555;
+  background-color: #4a7ab5;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background-color: white;
+  color: black;
+}
+
+.btn-danger {
+  background-color: #c0392b;
+}
+
+.btn-small {
+  padding: 3px 8px;
+  font-size: 13px;
+}
+
+/* Catálogo */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  width: 230px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+/* Formularios y ventanas */
+dialog {
+  width: 350px;
+  border: 1px solid #999;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form input {
+  display: block;
+  width: 95%;
+  padding: 5px;
+  margin-top: 3px;
+}
+
+.row {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.msg {
+  color: red;
+}
+
+/* Panel y tablas */
+.panel {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #eee;
+}
+
+.thumb {
+  width: 70px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.badge {
+  margin-right: 10px;
+}
+
+.muted {
+  color: gray;
+}
+
+.hidden {
+  display: none;
+}
